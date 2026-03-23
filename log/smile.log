@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/myconda/bin/deepspeed", line 3, in <module>
+    from deepspeed.launcher.runner import main
+  File "/root/miniconda3/envs/myconda/lib/python3.11/site-packages/deepspeed/__init__.py", line 26, in <module>
+    from . import module_inject
+  File "/root/miniconda3/envs/myconda/lib/python3.11/site-packages/deepspeed/module_inject/__init__.py", line 6, in <module>
+    from .replace_module import replace_transformer_layer, revert_transformer_layer, ReplaceWithTensorSlicing, GroupQuantizer, generic_injection
+  File "/root/miniconda3/envs/myconda/lib/python3.11/site-packages/deepspeed/module_inject/replace_module.py", line 16, in <module>
+    from .auto_tp import AutoTP, ReplaceWithTensorSlicing, Loading
+  File "/root/miniconda3/envs/myconda/lib/python3.11/site-packages/deepspeed/module_inject/auto_tp.py", line 14, in <module>
+    from .layers import *
+  File "/root/miniconda3/envs/myconda/lib/python3.11/site-packages/deepspeed/module_inject/layers.py", line 13, in <module>
+    from deepspeed.runtime.zero.utils import is_zero_param
+  File "/root/miniconda3/envs/myconda/lib/python3.11/site-packages/deepspeed/runtime/zero/__init__.py", line 6, in <module>
+    from .partition_parameters import ZeroParamType
+  File "/root/miniconda3/envs/myconda/lib/python3.11/site-packages/deepspeed/runtime/zero/partition_parameters.py", line 22, in <module>
+    from .linear import zero3_linear_wrap
+  File "/root/miniconda3/envs/myconda/lib/python3.11/site-packages/deepspeed/runtime/zero/linear.py", line 35, in <module>
+    autocast_custom_fwd = functools.partial(torch.amp.custom_fwd, device_type=get_accelerator().device_name())
+                                            ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'torch.amp' has no attribute 'custom_fwd'

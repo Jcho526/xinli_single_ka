@@ -5,7 +5,7 @@ export WORLD_SIZE=1
 export NOHUP=1
 
 nohup python train.py \
-  --model_name_or_path zai-org/chatglm2-6b \
+  --model_name_or_path zai-org/chatglm-6b \
   --train_path ./train_dir/train.json \
   --output_dir ./outputs \
   --train_type lora \
